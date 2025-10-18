@@ -147,4 +147,4 @@ WORKDIR /home/python
 
 USER python
 
-CMD ["python3"]
+# CMD ["python3"]
