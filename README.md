@@ -65,9 +65,9 @@ Run a simple benchmark against which ever server is running:
 
 ```
 
-### Profiling Results
+## Benchmark Results
 
-## No GIL
+### No GIL
 
 ```
 ab -n 100 -c 10 http://127.0.0.1:8000/
@@ -116,7 +116,7 @@ Percentage of the requests served within a certain time (ms)
  100%   1072 (longest request)
 ```
 
-## GIL
+### GIL
 
 ```
  ab -n 100 -c 10 http://127.0.0.1:8000/
