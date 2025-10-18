@@ -1,5 +1,5 @@
 # sourced from: https://github.com/docker-library/python/blob/master/3.14/slim-bookworm/Dockerfile
-# updated to disable gil
+# updated to disable gil and run as non-root user `python`
 
 # Pinned on 10/18/25
 FROM debian:bookworm-slim@sha256:7e490910eea2861b9664577a96b54ce68ea3e02ce7f51d89cb0103a6f9c386e0
@@ -143,7 +143,7 @@ RUN set -eux; \
 
 RUN apt-get install make jq --yes; useradd python; mkdir -p /home/python/app; chown -R python /home/python;
 
-WORKDIR /home/python/app
+WORKDIR /home/python
 
 USER python
 
